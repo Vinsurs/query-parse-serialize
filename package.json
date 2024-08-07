@@ -1,0 +1,43 @@
+{
+  "name": "query-parse-serialize",
+  "version": "1.0.0",
+  "description": "A library for parsing and serializing query strings in JavaScript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinsurs/query-parse-serialize.git"
+  },
+  "main": "dist/query-parse-serialize.umd.js",
+  "module": "dist/query-parse-serialize.es.js",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/query-parse-serialize.umd.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/query-parse-serialize.es.js",
+      "require": "./dist/query-parse-serialize.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc",
+    "test": "vitest run",
+    "prepublish": "npm run test && npm run build"
+  },
+  "keywords": [
+    "querystring",
+    "qs",
+    "url",
+    "query-parse-serialize",
+    "query-parse"
+  ],
+  "author": "vinsurs <2407232109@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5",
+    "vitest": "^2.0.5"
+  }
+}
